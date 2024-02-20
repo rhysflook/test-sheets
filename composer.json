@@ -1,0 +1,32 @@
+{
+    "name": "rhys/test_sheet_generation",
+    "description": "Excel spreadsheet generation based on descriptions defined in laravel test cases.",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^10.0",
+        "illuminate/console": "^10.0",
+        "phpoffice/phpspreadsheet": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rhys\\TestSheetGeneration\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rhys Flook"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "laravel/framework": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TestSheets\\Providers\\TestServiceProvider"
+            ]
+        }
+    }
+}
