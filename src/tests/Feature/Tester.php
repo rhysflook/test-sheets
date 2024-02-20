@@ -16,7 +16,7 @@ class Tester extends TestCase
     {
         parent::setUpBeforeClass();
         self::$writer = resolve(ExcelWriter::class);
-        self::$writer::$project = "アンダーワークス";
+        self::$writer::$project = "";
         self::$writer::$row = 9;
     }
 

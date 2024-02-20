@@ -38,6 +38,7 @@ class FeatureTest extends Command
     {
         $file = "<?php\n";
         $file .= "namespace Tests\Feature;\n";
+        $file .= "use TestSheets\Tests\Feature\Tester;\n";
         $file .= "use Illuminate\Foundation\Testing\RefreshDatabase;\n";
         $file .= "\n";
         $file .= "class $className extends Tester\n";
