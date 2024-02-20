@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Rhys\\TestSheetGeneration\\": "src/"
+            "TestSheets\\": "src/"
         }
     },
     "authors": [
@@ -25,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rhys\\TestSheetGeneration\\Providers\\TestServiceProvider"
+                "TestSheets\\Providers\\TestServiceProvider"
             ]
         }
     }
