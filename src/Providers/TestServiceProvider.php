@@ -1,5 +1,5 @@
 <?php
-namespace Src\Providers;
+namespace TestSheets\Providers;
 use Illuminate\Support\ServiceProvider;
 use TestSheets\Console\Commands\FeatureTest;
 
