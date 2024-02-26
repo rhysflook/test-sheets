@@ -3,12 +3,13 @@ namespace TestSheets\Tests\Feature;
 
 use TestSheets\Tests\ExcelWriter\ExcelWriter;
 use TestSheets\Tests\Feature\Traits\ValidatesForm;
-use Tests\TestCase;
+use Illuminate\Foundation\Testing\TestCase;
 
 class Tester extends TestCase
 {
 
     use ValidatesForm;
+    use \TestSheets\Tests\CreatesApplication;
 
     public static $writer;
     public $implicit = true;
