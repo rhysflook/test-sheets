@@ -3,13 +3,12 @@ namespace TestSheets\Tests\Feature;
 
 use TestSheets\Tests\ExcelWriter\ExcelWriter;
 use TestSheets\Tests\Feature\Traits\ValidatesForm;
-use Illuminate\Foundation\Testing\TestCase;
+use Tests\TestCase;
 
 class Tester extends TestCase
 {
 
     use ValidatesForm;
-    use \TestSheets\Tests\CreatesApplication;
 
     public static $writer;
     public $implicit = true;
@@ -17,13 +16,13 @@ class Tester extends TestCase
     {
         parent::setUpBeforeClass();
         self::$writer = resolve(ExcelWriter::class);
-        self::$writer::$project = config('sheets.project');
         self::$writer::$row = 9;
     }
 
     public static function setUpSheet($name, $index)
     {
         $sheet = new \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet(self::$writer::$spreadsheet, $name);
+        self::$writer::$project = config('sheets.project');
         self::$writer::$spreadsheet->addSheet($sheet, $index);
         self::$writer::$spreadsheet->setActiveSheetIndex($index);
         self::$writer::setUp($sheet);
