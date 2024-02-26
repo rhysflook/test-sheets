@@ -22,7 +22,7 @@ class Tester extends TestCase
     public static function setUpSheet($name, $index)
     {
         $sheet = new \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet(self::$writer::$spreadsheet, $name);
-        self::$writer::$project = config('sheets.project');
+        self::$writer::$project = config('sheets.project-name');
         self::$writer::$spreadsheet->addSheet($sheet, $index);
         self::$writer::$spreadsheet->setActiveSheetIndex($index);
         self::$writer::setUp($sheet);
