@@ -49,11 +49,11 @@ class FeatureTest extends Command
         $file .= "        parent::setUpBeforeClass();\n";
         $file .= "        self::\$writer::\$filename = \"$fileName\";\n";
         $file .= "        self::\$writer::\$page_name = \"$sheetName\";\n";
-        $file .= "        self::setUpSheet('一覧', 1);\n";
         $file .= "    }\n";
         $file .= "    public function setUp(): void\n";
         $file .= "    {\n";
         $file .= "        parent::setUp();\n";
+        $file .= "        self::setUpSheet('一覧', 1);\n";
         $file .= "    }\n";
         $file .= "}\n";
         $file .= "\n";
