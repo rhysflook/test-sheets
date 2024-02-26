@@ -14,5 +14,9 @@ class TestServiceProvider extends ServiceProvider {
                 FeatureTest::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__.'/../config/sheets.php' => config_path('sheets.php'),
+        ]);
     }
 }
